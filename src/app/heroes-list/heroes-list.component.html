@@ -1,0 +1,22 @@
+<p>Bonjour je suis le nouveau composant "heroes list"</p>
+
+
+
+
+<!-- <ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="selectedHero == hero" (click)="selectHero(hero)">
+        <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </li>
+</ul>
+<div *ngIf="selectedHero">
+    <h2>Détails de {{Hero.name | uppercase}} : </h2>
+    <div><span>id: </span>{{Hero.id}}</div>
+</div> -->
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="selectedHero == hero" (click)="selectHero(hero)">
+        <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </li>
+</ul>
+
+<app-hero-details *ngIf="selectedHero" [hero]="selectedHero"></app-hero-details>
